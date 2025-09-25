@@ -1,84 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Boleta Studio - Tu Estudio Musical Online</title>
-  <meta name="viewport" content="ancho = ancho de dispositivo, escala inicial = 1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BoletaStudio — Beats</title>
   <style>
-    body { font-family: 'Montserrat', Arial, sans-serif; background: #181818; color: #fff; margin: 0; }
-    header { background: #111; padding: 1rem 2rem; text-align: center; }
-    h1 { font-size: 2.2rem; margin: 0.5rem 0; }
-    nav { margin-top: 1rem; }
-    nav a { color: #ffcb05; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    section { max-width: 900px; margin: 2rem auto; background: #222; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 16px #0007; }
-    .beats-list audio { width: 100%; margin-top: 0.5rem; }
-    .download-btn { background: #ffcb05; color: #181818; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 0.5rem;}
-    .download-btn:hover { background: #ffc107;}
-    .freestyle-box { background: #333; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;}
-    .ai-chat { background: #222; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;}
-    footer { text-align: center; color: #aaa; padding: 2rem; }
+    body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:24px auto;padding:0 12px}
+    h1{color:#222}
+    .beat{display:flex;align-items:center;justify-content:space-between;padding:8px;border-bottom:1px solid #eee}
+    .info{flex:1}
+    audio{width:240px}
+    .genre{color:#666;font-size:0.9em}
+    .playbtn{margin-left:12px}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Boleta Studio 🎤</h1>
-    <nav>
-      <a href="#beats">Beats</a>
-      <a href="#freestyle">Freestyle Challenge</a>
-      <a href="#ai">IA Asistente</a>
-    </nav>
-    <p>Bienvenido a tu estudio musical online. ¡Descarga beats, reta tu freestyle y chatea con la IA!</p>
-  </header>
+  <h1>BoletaStudio — Beats (muestras)</h1>
+  <p>Haz clic en reproducir para escuchar los beats de muestra. Reemplaza los archivos en /beats por tus propios .mp3 cuando quieras.</p>
+  <div id="list"></div>
 
-  <section id="beats">
-    <h2>🎧 Beats para Descarga</h2>
-    <div class="beats-list">
-      <div>
-        <strong>Trampa barrio</strong>
-        <audio controls src="beats/trap_barrio.mp3"></audio>
-        <a class="download-btn" href="beats/trap_barrio.mp3" download>Descargar</a>
-      </div>
-      <div>
-        <strong>Reggaetón Sensual</strong>
-        <audio controls src="beats/reggaeton_sensual.mp3"></audio>
-        <a class="download-btn" href="beats/reggaeton_sensual.mp3" download>Descargar</a>
-      </div>
-      <div>
-        <strong>Perreo Fiesta</strong>
-        <audio controls src="beats/perreo_fiesta.mp3"></audio>
-        <a class="download-btn" href="beats/perreo_fiesta.mp3" download>Descargar</a>
-      </div>
-      <div>
-        <strong>Romántico Lento</strong>
-        <audio controls src="beats/romantico_lento.mp3"></audio>
-        <a class="descarga-BTN" href="beats/romantico_lento.mp3" download>Descargar</a>
-      </div>
-      <div>
-        <strong>Default Beat</strong>
-        <audio controls src="beats/default.mp3"></audio>
-        <a class="download-btn" href="beats/default.mp3" download>Descargar</a>
-      </div>
-    </div>
-  </section>
+  <script>
+    const beats = [
+      {file:'beats/reggaeton_sensual.mp3', name:'Reggaetón Sensual', genre:'Reggaetón'},
+      {file:'beats/perreo_fiesta.mp3', name:'Perreo Fiesta', genre:'Reggaetón/Perreo'},
+      {file:'beats/trap_barrio.mp3', name:'Trap Barrio', genre:'Trap'},
+      {file:'beats/rap_underground.mp3', name:'Rap Underground', genre:'Rap'},
+      {file:'beats/corridos_belicos.mp3', name:'Corridos Bélicos', genre:'Corridos'},
+      {file:'beats/hiphop_oldschool.mp3', name:'HipHop Oldschool', genre:'Hip Hop'},
+      {file:'beats/salsa_groove.mp3', name:'Salsa Groove', genre:'Salsa'},
+      {file:'beats/cumbia_latina.mp3', name:'Cumbia Latina', genre:'Cumbia'},
+      {file:'beats/electro_party.mp3', name:'Electro Party', genre:'Electrónica'},
+      {file:'beats/rock_urbano.mp3', name:'Rock Urbano', genre:'Rock'},
+      {file:'beats/default.mp3', name:'Default (libre)', genre:'Libre'}
+    ];
 
-  <section id="freestyle">
-    <h2>🔥 Freestyle Challenge</h2>
-    <div class="freestyle-box">
-      <p>¿Te atreves a improvisar? Elige un beat y deja fluir tu talento. ¡Comparte tus barras con la comunidad!</p>
-      <p><strong>Reto del día:</strong> Improvisa sobre <em>Reggaetón Sensual</em> con el tema "Noches en la ciudad".</p>
-    </div>
-  </section>
-
-  <section id="ai">
-    <h2>🤖 Asistente IA Musical</h2>
-    <div class="ai-chat">
-      <p>¿Necesitas inspiración? Pregunta a la IA sobre ideas de letras, consejos de producción, o retos de freestyle.</p>
-      <p><em>(Esta función es un ejemplo visual. Integra tu propia IA si lo deseas.)</em></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Boleta Studio. Hecho por  <a href="https://github.com/elfeoboleta-jpg" style="color:#ffcb05;">elfeoboleta-jpg</a></p>
-  </footer>
+    const listEl = document.getElementById('list');
+    beats.forEach(b=>{
+      const div = document.createElement('div');div.className='beat';
+      const info = document.createElement('div');info.className='info';
+      const title = document.createElement('div');title.textContent=b.name;
+      const genre = document.createElement('div');genre.className='genre';genre.textContent='Género: '+b.genre;
+      info.appendChild(title);info.appendChild(genre);
+      const audio = document.createElement('audio');audio.controls=true;audio.src=b.file;audio.preload='none';
+      div.appendChild(info);div.appendChild(audio);
+      listEl.appendChild(div);
+    });
+  </script>
 </body>
 </html>
