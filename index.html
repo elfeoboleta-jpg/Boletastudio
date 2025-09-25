@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Boleta Studio - Tu Estudio Musical Online</title>
+  <meta name="viewport" content="ancho = ancho de dispositivo, escala inicial = 1.0">
+  <style>
+    body { font-family: 'Montserrat', Arial, sans-serif; background: #181818; color: #fff; margin: 0; }
+    header { background: #111; padding: 1rem 2rem; text-align: center; }
+    h1 { font-size: 2.2rem; margin: 0.5rem 0; }
+    nav { margin-top: 1rem; }
+    nav a { color: #ffcb05; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    section { max-width: 900px; margin: 2rem auto; background: #222; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 16px #0007; }
+    .beats-list audio { width: 100%; margin-top: 0.5rem; }
+    .download-btn { background: #ffcb05; color: #181818; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 0.5rem;}
+    .download-btn:hover { background: #ffc107;}
+    .freestyle-box { background: #333; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;}
+    .ai-chat { background: #222; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;}
+    footer { text-align: center; color: #aaa; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Boleta Studio 🎤</h1>
+    <nav>
+      <a href="#beats">Beats</a>
+      <a href="#freestyle">Freestyle Challenge</a>
+      <a href="#ai">IA Asistente</a>
+    </nav>
+    <p>Bienvenido a tu estudio musical online. ¡Descarga beats, reta tu freestyle y chatea con la IA!</p>
+  </header>
+
+  <section id="beats">
+    <h2>🎧 Beats para Descarga</h2>
+    <div class="beats-list">
+      <div>
+        <strong>Trampa barrio</strong>
+        <audio controls src="beats/trap_barrio.mp3"></audio>
+        <a class="download-btn" href="beats/trap_barrio.mp3" download>Descargar</a>
+      </div>
+      <div>
+        <strong>Reggaetón Sensual</strong>
+        <audio controls src="beats/reggaeton_sensual.mp3"></audio>
+        <a class="download-btn" href="beats/reggaeton_sensual.mp3" download>Descargar</a>
+      </div>
+      <div>
+        <strong>Perreo Fiesta</strong>
+        <audio controls src="beats/perreo_fiesta.mp3"></audio>
+        <a class="download-btn" href="beats/perreo_fiesta.mp3" download>Descargar</a>
+      </div>
+      <div>
+        <strong>Romántico Lento</strong>
+        <audio controls src="beats/romantico_lento.mp3"></audio>
+        <a class="descarga-BTN" href="beats/romantico_lento.mp3" download>Descargar</a>
+      </div>
+      <div>
+        <strong>Default Beat</strong>
+        <audio controls src="beats/default.mp3"></audio>
+        <a class="download-btn" href="beats/default.mp3" download>Descargar</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="freestyle">
+    <h2>🔥 Freestyle Challenge</h2>
+    <div class="freestyle-box">
+      <p>¿Te atreves a improvisar? Elige un beat y deja fluir tu talento. ¡Comparte tus barras con la comunidad!</p>
+      <p><strong>Reto del día:</strong> Improvisa sobre <em>Reggaetón Sensual</em> con el tema "Noches en la ciudad".</p>
+    </div>
+  </section>
+
+  <section id="ai">
+    <h2>🤖 Asistente IA Musical</h2>
+    <div class="ai-chat">
+      <p>¿Necesitas inspiración? Pregunta a la IA sobre ideas de letras, consejos de producción, o retos de freestyle.</p>
+      <p><em>(Esta función es un ejemplo visual. Integra tu propia IA si lo deseas.)</em></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Boleta Studio. Hecho por  <a href="https://github.com/elfeoboleta-jpg" style="color:#ffcb05;">elfeoboleta-jpg</a></p>
+  </footer>
+</body>
+</html>
